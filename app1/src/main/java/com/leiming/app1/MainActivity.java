@@ -3,7 +3,9 @@ package com.leiming.app1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.netease.nim.uikit.common.activity.UI;
+
+public class MainActivity extends UI {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

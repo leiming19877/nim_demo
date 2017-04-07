@@ -95,6 +95,7 @@ public class BitmapUtil {
         if (src == null) {
             return null;
         }
+        //BitmapFactory.decodeFile()
         int w = src.getWidth();
         int h = src.getHeight();
         //需要处理图片太大造成的内存超过的问题,这里我的图片很小所以不写相应代码了
