@@ -1,2 +1,2 @@
-include ':uikit' 
+include ':uikit', ':app1'
 include ':demo'
