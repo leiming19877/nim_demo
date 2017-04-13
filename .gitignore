@@ -43,6 +43,9 @@ captures/
 *.jks
 
 #eclipse projct
-/.project
+.project
+.classpath
+proguard-project.txt
+project.properties
 .settings/
 
