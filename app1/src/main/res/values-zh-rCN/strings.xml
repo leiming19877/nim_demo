@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">测试应用</string>
     <string name="app_desc">about app</string>
+    <string name="open_percent">打开图表界面</string>
 </resources>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">App1</string>
     <string name="app_desc">about app</string>
+    <string name="open_percent">OpenPercent</string>
 </resources>
