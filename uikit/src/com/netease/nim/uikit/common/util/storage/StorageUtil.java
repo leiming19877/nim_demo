@@ -5,7 +5,12 @@ import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StorageUtil {
 	public final static long K = 1024;
@@ -121,4 +126,51 @@ public class StorageUtil {
 		return filePath.toLowerCase().endsWith(".3gp")
 				|| filePath.toLowerCase().endsWith(".mp4");
 	}
+
+	/**
+	 * 获取外置SD卡路径
+	 * @return  应该就一条记录或空
+	 */
+	public static List<String> getExtSDCardPath()
+	{
+		List<String> lResult = new ArrayList<String>();
+		try {
+			Runtime rt = Runtime.getRuntime();
+			Process proc = rt.exec("mount");
+			InputStream is = proc.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader br = new BufferedReader(isr);
+			String line;
+			while ((line = br.readLine()) != null) {
+				if (line.contains("extSdCard"))
+				{
+					String [] arr = line.split(" ");
+					String path = arr[1];
+					File file = new File(path);
+					if (file.isDirectory())
+					{
+						lResult.add(path);
+					}
+				}
+			}
+			isr.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return lResult;
+	}
+
+	/**
+	 * 获取第一个外置存储路径
+	 * @return
+	 */
+	public static String getFirstSDCardPath(){
+		List<String> list = getExtSDCardPath();
+		if(list == null || list.size() == 0){
+			return  null;
+		}
+		return list.get(0);
+	}
+
+
 }
