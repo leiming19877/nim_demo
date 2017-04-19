@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -40,7 +40,7 @@ dependencies {
     compile 'com.msj.javajsbridge:javajsbridge:1.0.4'
     //compile 'com.alibaba:fastjson:1.2.31'
     compile 'com.jakewharton:butterknife:8.5.1'
-    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     testCompile 'junit:junit:4.12'
 
 }

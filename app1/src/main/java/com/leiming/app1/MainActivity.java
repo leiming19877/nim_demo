@@ -27,10 +27,10 @@ public class MainActivity extends UI {
 
     private static final String TAG = "MainActivity";
 
-    @BindView(R.id.open_percent)
+    @BindView(R2.id.open_percent)
      Button openPercent;
 
-    @BindView(R.id.open_webview1)
+    @BindView(R2.id.open_webview1)
       Button openWebView;
 
     @Override

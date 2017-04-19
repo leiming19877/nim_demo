@@ -5,10 +5,11 @@ repositories {
         url 'http://maven.oschina.net/content/groups/public/'
     }
     */
+    mavenCentral()
 }
 
 dependencies {
     //classpath 'com.android.tools.build:gradle:2.2.2'
     classpath 'com.android.tools.build:gradle:2.2.3'
-    
+    classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
 }
