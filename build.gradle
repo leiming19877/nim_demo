@@ -8,6 +8,7 @@ allprojects {
 //        url 'http://maven.oschina.net/content/groups/public/'
 //        }
 //        maven { url "https://jitpack.io" }
+        google()
         jcenter()
 
     }
@@ -17,7 +18,8 @@ task clean(type: Delete) {
 }
 ext {
     compileSdkVersion = 25
-    buildToolsVersion = "25.0.2"
+    //buildToolsVersion = "25.0.2"
+    buildToolsVersion = "28.0.3"
     minSdkVersion = 19
     targetSdkVersion = 25
     versionCode = 30
