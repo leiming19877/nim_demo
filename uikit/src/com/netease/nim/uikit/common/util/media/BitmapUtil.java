@@ -123,7 +123,8 @@ public class BitmapUtil {
             StaticLayout layout = new StaticLayout(title,textPaint,w, Layout.Alignment.ALIGN_NORMAL,1.0F,0.0F,true);
             layout.draw(cv);
         }
-        cv.save(Canvas.ALL_SAVE_FLAG);// 保存
+        //cv.save(Canvas.ALL_SAVE_FLAG);// 保存
+        cv.save();// 保存
         cv.restore();// 存储
         return newb;
     }

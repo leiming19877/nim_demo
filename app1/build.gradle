@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    //buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.leiming.app1"
@@ -29,18 +29,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':uikit')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':uikit')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-//    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support.constraint:constraint-layout:+'
-    compile 'com.netease.nimlib:jsbridge:1.3.1'
-    compile 'com.msj.javajsbridge:javajsbridge:1.0.4'
-    //compile 'com.alibaba:fastjson:1.2.31'
-    compile 'com.jakewharton:butterknife:8.5.1'
+//    implementation 'com.android.support:appcompat-v7:24.2.1'
+//    implementation 'com.android.support.constraint:constraint-layout:+'
+    implementation 'com.netease.nimlib:jsbridge:1.3.1'
+    implementation 'com.msj.javajsbridge:javajsbridge:1.0.4'
+    //implementation 'com.alibaba:fastjson:1.2.31'
+    implementation 'com.jakewharton:butterknife:8.5.1'
     //annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    testCompile 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
 
 }

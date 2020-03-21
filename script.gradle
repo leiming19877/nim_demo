@@ -1,14 +1,15 @@
 repositories {
+    google()
     jcenter()
-    /*
     maven {
         url 'http://maven.oschina.net/content/groups/public/'
     }
-    */
+
 }
 
 dependencies {
     //classpath 'com.android.tools.build:gradle:2.2.2'
-    classpath 'com.android.tools.build:gradle:2.2.3'
+    //classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.android.tools.build:gradle:3.6.1'
     
 }
